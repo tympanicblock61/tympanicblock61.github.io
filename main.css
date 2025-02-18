@@ -1,0 +1,55 @@
+body {
+            font-family: monospace;
+            background-color: black;
+            color: greenyellow;
+        }
+
+        .commandLine {
+            position: relative;
+            height: 40vh;
+            width: 30vw;
+            overflow-y: auto;
+            padding: 5px;
+            border: 1px solid greenyellow;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .commands {
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* Internet Explorer/Edge */
+        }
+
+        .commands::-webkit-scrollbar {
+            display: none; /* Chrome, Safari */
+        }
+
+        .commands {
+            flex-grow: 1;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+
+        .input-line {
+            position: sticky;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            background-color: black;
+            padding: 5px;
+        }
+
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            height: 16px;
+            background-color: greenyellow;
+            margin-left: 2px;
+            animation: blink 0.8s steps(2, start) infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
